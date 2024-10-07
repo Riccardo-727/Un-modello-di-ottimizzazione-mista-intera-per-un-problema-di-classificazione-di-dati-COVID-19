@@ -1,0 +1,44 @@
+let N := 147;
+let P := 15;
+let mu := 0.000005;
+let alpha := 0.005;
+let D := 4;
+let N_min := 5;
+let T := 2^(D+1) -1;
+
+
+
+
+let OSSERVAZIONI := 1 .. N;
+let FEATURES := 1 .. P;
+let BRANCH_NODES := 1..floor(T/2);    
+let LEAF_NODES := floor(T/2) +1 .. T;      
+let TOTAL_NODES := BRANCH_NODES union LEAF_NODES;
+let CLASSI := {0,1};
+
+
+
+#inizilizzazione degli ancestor
+for{t in TOTAL_NODES}{ 
+let A_L[t] := {} ;
+let A_R[t] := {} ;
+}
+ 
+
+#calcolo degli ancestor
+for{t in TOTAL_NODES diff {1} }{ 
+let temp := t;
+	repeat { 
+		if temp mod 2 == 0 then 
+			let A_L[t] := A_L[t] union {temp/2};
+			else
+			let A_R[t] := A_R[t] union {floor(temp/2)};
+		let temp := floor(temp/2);	
+		}  while temp/2 >=1 ;
+}	 
+
+
+#calcolo a_l_t
+for{t in LEAF_NODES diff {T}: t mod 2 != 0}{
+	let a_l_max[t] := max{m in A_L[t]} m;
+}
