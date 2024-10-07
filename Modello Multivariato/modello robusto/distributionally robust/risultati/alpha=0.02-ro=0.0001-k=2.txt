@@ -1,0 +1,3963 @@
+ampl: include init.run;
+inizio iterazione0
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.62449e+06 simplex iterations
+574710 branching nodes
+absmipgap=0.413333, relmipgap=0.911765
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.836735
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1    -0.00712805   0   0
+2     0.00317056   0   0
+3     0            0   0
+4     0.00168721   0   0
+5     0            0   0
+6     0            0   0
+7     0            0   0
+8     0            0   0
+9     0.00193878   0   0
+10    0            0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14   -0.00285568   0   0
+15   -0.00198944   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  13
+6   0
+7  10
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione0
+inizio iterazione1
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.41929e+06 simplex iterations
+677989 branching nodes
+absmipgap=0.371429, relmipgap=0.902778
+accuratezza out sample
+accuratezza = 0.333333
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1    -0.0167393    0   0
+2     0.00781644   0   0
+3     0            0   0
+4     0.00311712   0   0
+5     0            0   0
+6     0            0   0
+7     0            0   0
+8     0            0   0
+9     0            0   0
+10    0.00668202   0   0
+11    0            0   0
+12   -0.00141002   0   0
+13    0            0   0
+14   -0.00556971   0   0
+15   -0.00365362   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7   7
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione1
+inizio iterazione2
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.21603e+06 simplex iterations
+655566 branching nodes
+absmipgap=0.465556, relmipgap=0.920879
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.823129
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.00244429    0   0
+2     0.0037814     0   0
+3    -0.00136408    0   0
+4     0.00120672    0   0
+5     0.000374773   0   0
+6     0.00237615    0   0
+7     0.00192714    0   0
+8     0             0   0
+9     0             0   0
+10    0             0   0
+11    0.00238545    0   0
+12    0             0   0
+13    0.00449799    0   0
+14   -0.000997245   0   0
+15    0             0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  16
+6   0
+7   6
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione2
+inizio iterazione3
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.49137e+06 simplex iterations
+612195 branching nodes
+absmipgap=0.417143, relmipgap=0.9125
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.829932
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2    -0.00118135   0   0
+3    -0.00378733   0   0
+4     0            0   0
+5     0            0   0
+6    -0.00116421   0   0
+7    -0.00928435   0   0
+8     0            0   0
+9     0            0   0
+10    0            0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15    0.0198584    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7  13
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  1
+;
+
+fine iterazione3
+inizio iterazione4
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+5.4039e+06 simplex iterations
+631818 branching nodes
+absmipgap=0.36169, relmipgap=0.900421
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.00392284    0   0
+2     0.00122135    0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0             0   0
+7     0             0   0
+8     0             0   0
+9     0             0   0
+10    0.00156447    0   0
+11    0             0   0
+12    0             0   0
+13    0.000354913   0   0
+14   -0.000646563   0   0
+15   -0.000340928   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  17
+6   0
+7   3
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione4
+inizio iterazione5
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.78502e+06 simplex iterations
+594960 branching nodes
+absmipgap=0.351429, relmipgap=0.89781
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0             0   0
+2     0.00226727    0   0
+3     0             0   0
+4     0             0   0
+5     0.000827145   0   0
+6     0             0   0
+7     0.00230157    0   0
+8     0             0   0
+9     0             0   0
+10    0.00261626    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0.000969091   0   0
+15   -0.000530725   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7   7
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  1
+;
+
+fine iterazione5
+inizio iterazione6
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+5.3366e+06 simplex iterations
+604114 branching nodes
+absmipgap=0.317183, relmipgap=0.888013
+accuratezza out sample
+accuratezza = 0.333333
+
+accuratezza_in sample
+accuratezza = 0.897959
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.00160253    0   0
+2     0.00192773    0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0.0013032     0   0
+7     0.00184518    0   0
+8    -0.000232263   0   0
+9     0             0   0
+10    0.00298047    0   0
+11    0             0   0
+12    0             0   0
+13    0.00110501    0   0
+14    0             0   0
+15   -0.00104551    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7   2
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  1
+;
+
+fine iterazione6
+inizio iterazione7
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.48392e+06 simplex iterations
+631613 branching nodes
+absmipgap=0.319437, relmipgap=0.888715
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.870748
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0.00319483   0   0
+2    -0.00313593   0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6     0            0   0
+7    -0.00332893   0   0
+8     0            0   0
+9     0            0   0
+10   -0.00436905   0   0
+11   -0.00182234   0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15    0.00171242   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   4
+6   0
+7  13
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione7
+inizio iterazione8
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.07084e+06 simplex iterations
+611648 branching nodes
+absmipgap=0.336111, relmipgap=0.893648
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.870748
+
+altre variabili
+a [*,*]
+:        1        2   3    :=
+1    -0.0796291   0   0
+2     0.105405    0   0
+3     0           0   0
+4     0           0   0
+5     0           0   0
+6     0.056134    0   0
+7     0.0536364   0   0
+8     0           0   0
+9     0           0   0
+10    0.178991    0   0
+11    0           0   0
+12    0           0   0
+13    0.144847    0   0
+14    0           0   0
+15   -0.0588169   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  13
+6   0
+7   4
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  0
+;
+
+fine iterazione8
+inizio iterazione9
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.70216e+06 simplex iterations
+655414 branching nodes
+absmipgap=0.345714, relmipgap=0.896296
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.857143
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0.001999     0   0
+2    -0.00317985   0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6    -0.00604351   0   0
+7     0            0   0
+8     0            0   0
+9     0            0   0
+10   -0.00379503   0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15    0.0023195    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   5
+6   0
+7  15
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione9
+inizio iterazione10
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.86675e+06 simplex iterations
+597626 branching nodes
+absmipgap=0.548571, relmipgap=0.932039
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.843537
+
+altre variabili
+a [*,*]
+:         1        2        3          :=
+1    -0.00644105   0   -0.000175551
+2     0            0    0.000169786
+3     0.00542971   0    0
+4     0.00352528   0    0.000131781
+5    -0.00371111   0    0
+6     0            0    0
+7     0            0    0
+8     0            0    0
+9     0.005333     0    5.07058e-05
+10    0.0118427    0    0
+11    0            0    0
+12    0.00260613   0    0
+13    0            0    0
+14    0            0    0
+15   -0.00496243   0   -0.000127174
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  1
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   1
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  19
+6   2
+7   2
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  1
+;
+
+fine iterazione10
+inizio iterazione11
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.32871e+06 simplex iterations
+644678 branching nodes
+absmipgap=0.395775, relmipgap=0.908209
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1    -0.00845705   0   0
+2     0.00937153   0   0
+3     0            0   0
+4     0.00267766   0   0
+5     0            0   0
+6     0.00229903   0   0
+7     0            0   0
+8     0            0   0
+9     0            0   0
+10    0.00892494   0   0
+11    0            0   0
+12    0.00205304   0   0
+13    0            0   0
+14    0.00199466   0   0
+15    0            0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  10
+6   0
+7  11
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione11
+inizio iterazione12
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.89288e+06 simplex iterations
+585286 branching nodes
+absmipgap=0.353521, relmipgap=0.898354
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.870748
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0             0   0
+2     0.00136298    0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0.000532877   0   0
+7     0.00196433    0   0
+8     0             0   0
+9     0             0   0
+10    0.00141247    0   0
+11    0             0   0
+12    0             0   0
+13    0.00296646    0   0
+14    0.00159822    0   0
+15   -0.00111921    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  13
+6   0
+7   5
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  0
+;
+
+fine iterazione12
+inizio iterazione13
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.08803e+06 simplex iterations
+681867 branching nodes
+absmipgap=0.342857, relmipgap=0.895522
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.877551
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0             0   0
+2     0.00136298    0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0.000532877   0   0
+7     0.00196433    0   0
+8     0             0   0
+9     0             0   0
+10    0.00141247    0   0
+11    0             0   0
+12    0             0   0
+13    0.00296646    0   0
+14    0.00159822    0   0
+15   -0.00111921    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7   5
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  0
+;
+
+fine iterazione13
+inizio iterazione14
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.11542e+06 simplex iterations
+544598 branching nodes
+absmipgap=0.343889, relmipgap=0.895803
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0.0162711    0   0
+2    -0.00472241   0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6     0            0   0
+7     0            0   0
+8     0            0   0
+9     0            0   0
+10   -0.0073714    0   0
+11    0            0   0
+12    0.00103245   0   0
+13    0            0   0
+14    0.00397517   0   0
+15    0.00238545   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   2
+6   0
+7  17
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione14
+inizio iterazione15
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.96893e+06 simplex iterations
+603619 branching nodes
+absmipgap=0.339437, relmipgap=0.894581
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.870748
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0             0   0
+2    -0.00118068    0   0
+3     0             0   0
+4    -0.000645114   0   0
+5     0             0   0
+6    -0.000806867   0   0
+7    -0.00269473    0   0
+8     0             0   0
+9     0             0   0
+10   -0.00262325    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14   -0.00176352    0   0
+15    0.00241846    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   5
+6   0
+7  12
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  1
+;
+
+fine iterazione15
+inizio iterazione16
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.57436e+06 simplex iterations
+637603 branching nodes
+absmipgap=0.328571, relmipgap=0.891473
+accuratezza out sample
+accuratezza = 0.333333
+
+accuratezza_in sample
+accuratezza = 0.884354
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0             0   0
+2    -0.00128778    0   0
+3     0             0   0
+4    -0.000298856   0   0
+5     0             0   0
+6    -0.000324488   0   0
+7    -0.00124356    0   0
+8     0             0   0
+9     0             0   0
+10   -0.00112001    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14   -0.000715596   0   0
+15    0.00107289    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4  0
+5  7
+6  0
+7  9
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  1
+;
+
+fine iterazione16
+inizio iterazione17
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.1364e+06 simplex iterations
+626038 branching nodes
+absmipgap=0.426197, relmipgap=0.914199
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.823129
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2     0            0   0
+3    -0.00331783   0   0
+4     0            0   0
+5     0            0   0
+6    -0.00125958   0   0
+7    -0.00858884   0   0
+8     0            0   0
+9     0            0   0
+10   -0.00094728   0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15    0.0204698    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  13
+6   0
+7  13
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione17
+inizio iterazione18
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.26601e+06 simplex iterations
+557393 branching nodes
+absmipgap=0.419444, relmipgap=0.912938
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.843537
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0.00500845   0   0
+2    -0.00861681   0   0
+3     0            0   0
+4    -0.00250122   0   0
+5     0            0   0
+6     0            0   0
+7     0            0   0
+8     0            0   0
+9    -0.00160196   0   0
+10   -0.0093547    0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14   -0.00453324   0   0
+15    0.00255559   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  14
+6   0
+7   9
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione18
+inizio iterazione19
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.65687e+06 simplex iterations
+612619 branching nodes
+absmipgap=0.527042, relmipgap=0.929459
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.748299
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2    -0.0013394    0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6     0            0   0
+7     0            0   0
+8     0            0   0
+9     0            0   0
+10   -0.00345589   0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15    0.015494     0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  15
+6   0
+7  21
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  0
+;
+
+fine iterazione19
+inizio iterazione20
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+5.30994e+06 simplex iterations
+641322 branching nodes
+absmipgap=0.313521, relmipgap=0.886853
+accuratezza out sample
+accuratezza = 0.333333
+
+accuratezza_in sample
+accuratezza = 0.877551
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0             0   0
+2     0.000340646   0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0             0   0
+7     0.000394266   0   0
+8     0             0   0
+9     0             0   0
+10    0.000301143   0   0
+11    0             0   0
+12    0             0   0
+13    0.00066555    0   0
+14    0             0   0
+15   -0.000231104   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7   6
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione20
+inizio iterazione21
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.14961e+06 simplex iterations
+605307 branching nodes
+absmipgap=0.377143, relmipgap=0.90411
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.870748
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.00372009    0   0
+2     0.00211634    0   0
+3     0             0   0
+4     0.000852339   0   0
+5     0             0   0
+6     0             0   0
+7     0             0   0
+8     0             0   0
+9     0             0   0
+10    0.00198689    0   0
+11    0.000834907   0   0
+12   -0.000431895   0   0
+13    0             0   0
+14   -0.00161393    0   0
+15   -0.00092529    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  10
+6   0
+7   8
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione21
+inizio iterazione22
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.93092e+06 simplex iterations
+617796 branching nodes
+absmipgap=0.339437, relmipgap=0.894581
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.884354
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2     0.00880212   0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6     0.00487457   0   0
+7     0.0042829    0   0
+8     0            0   0
+9     0            0   0
+10    0.00892133   0   0
+11    0.00525668   0   0
+12    0            0   0
+13    0.0189291    0   0
+14    0            0   0
+15   -0.0038249    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  13
+6   0
+7   4
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione22
+inizio iterazione23
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+5.85069e+06 simplex iterations
+721986 branching nodes
+absmipgap=0.346377, relmipgap=0.896474
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.884354
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2     0.00880212   0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6     0.00487457   0   0
+7     0.0042829    0   0
+8     0            0   0
+9     0            0   0
+10    0.00892133   0   0
+11    0.00525668   0   0
+12    0            0   0
+13    0.0189291    0   0
+14    0            0   0
+15   -0.0038249    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  13
+6   0
+7   4
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  1
+;
+
+fine iterazione23
+inizio iterazione24
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.13019e+06 simplex iterations
+626783 branching nodes
+absmipgap=0.375362, relmipgap=0.903699
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0.000410392   0   0
+2    -0.000943288   0   0
+3    -0.000234497   0   0
+4     0             0   0
+5    -0.000182718   0   0
+6     0             0   0
+7    -0.000479967   0   0
+8     0             0   0
+9     0             0   0
+10   -0.00105454    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0             0   0
+15    0.000185148   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   8
+6   0
+7  11
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  1
+;
+
+fine iterazione24
+inizio iterazione25
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.36314e+06 simplex iterations
+562357 branching nodes
+absmipgap=0.347606, relmipgap=0.896802
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.843537
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0.0011276     0   0
+2    -0.00124633    0   0
+3     0             0   0
+4     0             0   0
+5     3.05706e-08   0   0
+6     0             0   0
+7     0             0   0
+8     0             0   0
+9     0             0   0
+10   -0.0010376     0   0
+11    0             0   0
+12    0             0   0
+13   -0.002142      0   0
+14    0.000728436   0   0
+15    0.000364219   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   5
+6   0
+7  14
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  1
+;
+
+fine iterazione25
+inizio iterazione26
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.35844e+06 simplex iterations
+542396 branching nodes
+absmipgap=0.351667, relmipgap=0.897872
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.843537
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1    -0.00103279   0   0
+2     0.0014589    0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6     0.00281812   0   0
+7     0            0   0
+8     0            0   0
+9     0            0   0
+10    0.00206384   0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15   -0.0014031    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  16
+6   0
+7   5
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione26
+inizio iterazione27
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.4876e+06 simplex iterations
+608903 branching nodes
+absmipgap=0.398028, relmipgap=0.908682
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.829932
+
+altre variabili
+a [*,*]
+:        1        2        3         :=
+1    0            0    0.00252451
+2    0            0    0
+3    0            0    0
+4    0            0    0
+5    0            0    0
+6    0            0    0
+7    0            0   -0.00180468
+8    0            0    0
+9    0            0    0
+10   0            0   -0.00100541
+11   0            0   -0.00111708
+12   0            0    0
+13   0            0    0
+14   0            0    0
+15   0.00524149   0    0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  1
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   1
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  16
+6   0
+7   8
+;
+
+nodo_foglia_calcolato [*] :=
+1  6
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  0
+;
+
+fine iterazione27
+inizio iterazione28
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.18434e+06 simplex iterations
+587458 branching nodes
+absmipgap=0.46, relmipgap=0.92
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.802721
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0.00197816    0   0
+2    -0.00122297    0   0
+3     0             0   0
+4     0             0   0
+5     0.000500909   0   0
+6    -0.00139725    0   0
+7     0             0   0
+8     0             0   0
+9     0             0   0
+10    0             0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0             0   0
+15    0.00547224    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  13
+6   0
+7  15
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  0
+;
+
+fine iterazione28
+inizio iterazione29
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.86073e+06 simplex iterations
+631983 branching nodes
+absmipgap=0.38087, relmipgap=0.904959
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2     0.00712791   0   0
+3     0.00141071   0   0
+4     0            0   0
+5    -0.00234236   0   0
+6     0            0   0
+7     0.00588549   0   0
+8     0            0   0
+9     0            0   0
+10    0.00753422   0   0
+11    0            0   0
+12    0            0   0
+13    0.00658892   0   0
+14    0.00419991   0   0
+15   -0.00118367   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  10
+6   0
+7   8
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione29
+inizio iterazione30
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.45928e+06 simplex iterations
+623374 branching nodes
+absmipgap=0.389855, relmipgap=0.906945
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0.000886394   0   0
+2    -0.000904139   0   0
+3     0             0   0
+4    -0.000793706   0   0
+5     0             0   0
+6     0             0   0
+7    -0.00153208    0   0
+8     0             0   0
+9     0             0   0
+10   -0.00153116    0   0
+11   -0.00195835    0   0
+12    0             0   0
+13    0             0   0
+14    0             0   0
+15    0.00265875    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   8
+6   0
+7  12
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  1
+;
+
+fine iterazione30
+inizio iterazione31
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.12316e+06 simplex iterations
+626174 branching nodes
+absmipgap=0.366377, relmipgap=0.901569
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2     0.016734     0   0
+3     0            0   0
+4     0            0   0
+5     0.00265483   0   0
+6     0.00267949   0   0
+7     0.0213398    0   0
+8     0            0   0
+9    -0.011047     0   0
+10    0.0303254    0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0.0159446    0   0
+15   -0.0105664    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  11
+6   0
+7   6
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  1
+;
+
+fine iterazione31
+inizio iterazione32
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.61361e+06 simplex iterations
+586007 branching nodes
+absmipgap=0.38169, relmipgap=0.905144
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:        1        2   3    :=
+1     0.0326154   0   0
+2    -0.108009    0   0
+3     0           0   0
+4     0           0   0
+5     0           0   0
+6     0           0   0
+7    -0.0566062   0   0
+8     0           0   0
+9     0           0   0
+10   -0.0776073   0   0
+11    0           0   0
+12    0           0   0
+13   -0.0273926   0   0
+14   -0.0251784   0   0
+15    0.0102141   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  11
+6   0
+7   9
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  1
+;
+
+fine iterazione32
+inizio iterazione33
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.51068e+06 simplex iterations
+639877 branching nodes
+absmipgap=0.357183, relmipgap=0.899291
+accuratezza out sample
+accuratezza = 0.333333
+
+accuratezza_in sample
+accuratezza = 0.884354
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0.0224125    0   0
+2    -0.0380088    0   0
+3     0.00804924   0   0
+4    -0.0141756    0   0
+5    -0.00628413   0   0
+6    -0.0103616    0   0
+7    -0.0409967    0   0
+8     0            0   0
+9     0            0   0
+10   -0.029549     0   0
+11   -0.0142095    0   0
+12    0            0   0
+13    0            0   0
+14   -0.0232112    0   0
+15    0            0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4  0
+5  5
+6  0
+7  9
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione33
+inizio iterazione34
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.38932e+06 simplex iterations
+589212 branching nodes
+absmipgap=0.387606, relmipgap=0.906456
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2    -0.0281542    0   0
+3    -0.002632     0   0
+4    -0.00227606   0   0
+5    -0.00781794   0   0
+6     0            0   0
+7    -0.0265011    0   0
+8     0            0   0
+9     0            0   0
+10   -0.0185653    0   0
+11   -0.0143676    0   0
+12    0            0   0
+13    0            0   0
+14   -0.0147037    0   0
+15    0            0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  10
+6   0
+7   9
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione34
+inizio iterazione35
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.59484e+06 simplex iterations
+598816 branching nodes
+absmipgap=0.397143, relmipgap=0.908497
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.829932
+
+altre variabili
+a [*,*]
+:        1       2   3    :=
+1     0.131879   0   0
+2     0          0   0
+3    -0.327354   0   0
+4     0          0   0
+5     0          0   0
+6     0          0   0
+7     0          0   0
+8     0          0   0
+9     0          0   0
+10   -0.519588   0   0
+11    0          0   0
+12    0          0   0
+13    0          0   0
+14    0          0   0
+15    0.352501   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7  13
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione35
+inizio iterazione36
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.50475e+06 simplex iterations
+596279 branching nodes
+absmipgap=0.385714, relmipgap=0.90604
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.843537
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1    -0.00162519   0   0
+2     0.00282274   0   0
+3     0            0   0
+4     0            0   0
+5     0            0   0
+6     0            0   0
+7     0.0034793    0   0
+8     0            0   0
+9     0            0   0
+10    0.00449899   0   0
+11    0            0   0
+12    0            0   0
+13    0.00751009   0   0
+14    0.00440513   0   0
+15   -0.0010114    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  15
+6   0
+7   5
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  0
+;
+
+fine iterazione36
+inizio iterazione37
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.27795e+06 simplex iterations
+639886 branching nodes
+absmipgap=0.351429, relmipgap=0.89781
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.00197333    0   0
+2     0.00226614    0   0
+3     0             0   0
+4     0             0   0
+5     0.000517666   0   0
+6     0             0   0
+7     0.00117564    0   0
+8     0             0   0
+9     0             0   0
+10    0.00177208    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0             0   0
+15   -0.000365377   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  11
+6   0
+7   8
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  1
+;
+
+fine iterazione37
+inizio iterazione38
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.57458e+06 simplex iterations
+580122 branching nodes
+absmipgap=0.50169, relmipgap=0.926157
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1            2            3          :=
+1     0             0           0.000190548
+2     0             0          -0.000437662
+3     0             0           0
+4     0             0           0
+5     0            -0.931578    9.22359e-05
+6     0             0           0
+7     0             0           0
+8     0             0           0
+9     0             0           0.000343894
+10    0            -0.633461   -0.0007282
+11   -0.00379289    0           0
+12    0            -0.758671    0.000323163
+13    0            -9.74256     0
+14    0             0           0
+15   -0.00758144    0           0.000631817
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  1
+3  1
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   1
+1 4   1
+1 5   0
+1 6   1
+1 7   0
+;
+
+L_t [*] :=
+4   1
+5  11
+6   7
+7   1
+;
+
+nodo_foglia_calcolato [*] :=
+1  6
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  0
+;
+
+fine iterazione38
+inizio iterazione39
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.73556e+06 simplex iterations
+727277 branching nodes
+absmipgap=0.337143, relmipgap=0.893939
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.870748
+
+altre variabili
+a [*,*]
+:        1        2   3    :=
+1    -0.0137173   0   0
+2     0.0677525   0   0
+3     0           0   0
+4     0           0   0
+5     0           0   0
+6     0           0   0
+7     0.0123279   0   0
+8     0           0   0
+9     0           0   0
+10    0.0762537   0   0
+11    0           0   0
+12    0           0   0
+13    0.225837    0   0
+14    0           0   0
+15   -0.0460562   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  15
+6   0
+7   3
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  0
+;
+
+fine iterazione39
+inizio iterazione40
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.54031e+06 simplex iterations
+657187 branching nodes
+absmipgap=0.34169, relmipgap=0.895203
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.000961357   0   0
+2     0.000993933   0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0             0   0
+7     0.00113516    0   0
+8     0             0   0
+9     0             0   0
+10    0.000936164   0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0             0   0
+15   -0.000681304   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  14
+6   0
+7   6
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  0
+;
+
+fine iterazione40
+inizio iterazione41
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.39544e+06 simplex iterations
+596500 branching nodes
+absmipgap=0.365714, relmipgap=0.901408
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0.00315201   0   0
+2    -0.00410248   0   0
+3     0            0   0
+4    -0.00189005   0   0
+5     0            0   0
+6     0            0   0
+7    -0.00433241   0   0
+8     0            0   0
+9     0            0   0
+10   -0.0063513    0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15    0.00183253   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   8
+6   0
+7  12
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  5
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  1
+;
+
+fine iterazione41
+inizio iterazione42
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.63556e+06 simplex iterations
+601915 branching nodes
+absmipgap=0.38169, relmipgap=0.905144
+accuratezza out sample
+accuratezza = 0.333333
+
+accuratezza_in sample
+accuratezza = 0.843537
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.00165876    0   0
+2     0.00338504    0   0
+3     0.00134325    0   0
+4     0             0   0
+5     0             0   0
+6     0             0   0
+7     0.00176636    0   0
+8     0             0   0
+9     0             0   0
+10    0.00551026    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0.00259731    0   0
+15   -0.000888171   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  10
+6   0
+7  10
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione42
+inizio iterazione43
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.50616e+06 simplex iterations
+682954 branching nodes
+absmipgap=0.34169, relmipgap=0.895203
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0             0   0
+2     0.0015171     0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0             0   0
+7     0.00255712    0   0
+8     0             0   0
+9     0             0   0
+10    0.0027309     0   0
+11    0             0   0
+12   -0.000607242   0   0
+13    0             0   0
+14    0             0   0
+15   -0.00110896    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  14
+6   0
+7   6
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione43
+inizio iterazione44
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+5.35514e+06 simplex iterations
+651190 branching nodes
+absmipgap=0.347606, relmipgap=0.896802
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.870748
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.00178407    0   0
+2     0.00170888    0   0
+3     0             0   0
+4     0             0   0
+5     0.000495748   0   0
+6     0             0   0
+7     0.000979638   0   0
+8     0             0   0
+9     0             0   0
+10    0.00167883    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0             0   0
+15   -0.000268678   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7   7
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  0
+2  1
+3  0
+;
+
+fine iterazione44
+inizio iterazione45
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.0021e+06 simplex iterations
+601877 branching nodes
+absmipgap=0.374286, relmipgap=0.903448
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.843537
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0.00394694   0   0
+2    -0.00489414   0   0
+3     0            0   0
+4    -0.00382355   0   0
+5     0            0   0
+6     0            0   0
+7     0            0   0
+8     0            0   0
+9     0            0   0
+10   -0.00445687   0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15    0.0038626    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  10
+6   0
+7  12
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  1
+2  0
+3  0
+;
+
+fine iterazione45
+inizio iterazione46
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.8959e+06 simplex iterations
+634605 branching nodes
+absmipgap=0.34169, relmipgap=0.895203
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.85034
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1    -0.000824512   0   0
+2     0.00165546    0   0
+3     0             0   0
+4     0             0   0
+5     0             0   0
+6     0             0   0
+7     0             0   0
+8     0             0   0
+9     0             0   0
+10    0.00195818    0   0
+11    0             0   0
+12    0             0   0
+13    0.00566536    0   0
+14    0             0   0
+15   -0.0011401     0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  17
+6   0
+7   3
+;
+
+nodo_foglia_calcolato [*] :=
+1  5
+2  5
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  1
+;
+
+fine iterazione46
+inizio iterazione47
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.7449e+06 simplex iterations
+630198 branching nodes
+absmipgap=0.357143, relmipgap=0.899281
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2     0.0417805    0   0
+3     0            0   0
+4     0            0   0
+5     0.0265906    0   0
+6     0.0488817    0   0
+7     0.035497     0   0
+8    -0.00963977   0   0
+9     0            0   0
+10    0.0612856    0   0
+11    0            0   0
+12    0            0   0
+13    0            0   0
+14    0            0   0
+15   -0.0179757    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   1
+0 6   0
+0 7   0
+1 4   0
+1 5   0
+1 6   0
+1 7   1
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7   6
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  5
+;
+
+classe_calcolata [*] :=
+1  1
+2  1
+3  0
+;
+
+fine iterazione47
+inizio iterazione48
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+3.8863e+06 simplex iterations
+609530 branching nodes
+absmipgap=0.421111, relmipgap=0.913253
+accuratezza out sample
+accuratezza = 1
+
+accuratezza_in sample
+accuratezza = 0.816327
+
+altre variabili
+a [*,*]
+:         1        2   3    :=
+1     0            0   0
+2     0            0   0
+3    -0.00297994   0   0
+4     0            0   0
+5     0            0   0
+6    -0.00156744   0   0
+7    -0.00892371   0   0
+8     0            0   0
+9     0            0   0
+10    0            0   0
+11    0            0   0
+12    0            0   0
+13   -0.0013706    0   0
+14    0            0   0
+15    0.0224871    0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5  12
+6   0
+7  14
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione48
+inizio iterazione49
+Gurobi 10.0.2: lim:time=1000
+mip:intfocus=1
+mip:inttol=1e-06
+alg:feastol=1e-06
+Gurobi 10.0.2: time limit, feasible solution
+4.51661e+06 simplex iterations
+645394 branching nodes
+absmipgap=0.36169, relmipgap=0.900421
+accuratezza out sample
+accuratezza = 0.666667
+
+accuratezza_in sample
+accuratezza = 0.863946
+
+altre variabili
+a [*,*]
+:         1         2   3    :=
+1     0.000399773   0   0
+2     0             0   0
+3    -0.000580723   0   0
+4     0             0   0
+5     0             0   0
+6     0             0   0
+7     0             0   0
+8     0             0   0
+9     0.000515269   0   0
+10   -0.00155458    0   0
+11    0             0   0
+12    0             0   0
+13    0             0   0
+14    0.000311239   0   0
+15    0.000770444   0   0
+;
+
+b [*] :=
+1  0
+2  0
+3  0
+;
+
+d [*] :=
+1  1
+2  0
+3  0
+;
+
+c_kt :=
+0 4   0
+0 5   0
+0 6   0
+0 7   1
+1 4   0
+1 5   1
+1 6   0
+1 7   0
+;
+
+L_t [*] :=
+4   0
+5   9
+6   0
+7  11
+;
+
+nodo_foglia_calcolato [*] :=
+1  7
+2  7
+3  7
+;
+
+classe_calcolata [*] :=
+1  0
+2  0
+3  0
+;
+
+fine iterazione49
+ampl: display accuratezza_media;
+accuratezza_media = 0.78
+
+ampl: display accuratezza_media_in_sample;
+accuratezza_media_in_sample = 0.853878
+
+ampl: display sol;
+sol [*,*] (tr)
+:       1          2          3        :=
+0    0.666667   0.666667   1
+1    0.333333   0.5        0.5
+2    1          1          1
+3    1          1          1
+4    1          1          1
+5    1          1          1
+6    0.333333   1          0.333333
+7    0.666667   1          0.5
+8    0.666667   1          0
+9    0.666667   0.5        1
+10   1          1          1
+11   0.666667   0          1
+12   1          1          1
+13   0.666667   0.5        1
+14   1          1          1
+15   0.666667   1          0.5
+16   0.333333   0.5        0.5
+17   1          1          1
+18   1          1          1
+19   1          1          1
+20   0.333333   0          0
+21   0.666667   0.5        1
+22   0.666667   0          1
+23   0.666667   0.666667   1
+24   1          1          1
+25   0.666667   1          0.5
+26   1          1          1
+27   1          1          1
+28   0.666667   0.5        1
+29   0.666667   0.666667   1
+30   0.666667   0.666667   1
+31   1          1          1
+32   0.666667   1          0.5
+33   0.333333   0          0
+34   0.666667   1          0.5
+35   1          1          1
+36   0.666667   0.5        1
+37   1          1          1
+38   1          1          1
+39   0.666667   0.5        1
+40   1          1          1
+41   1          1          1
+42   0.333333   0          0
+43   0.666667   1          0.5
+44   1          1          1
+45   0.666667   0.5        1
+46   1          1          1
+47   1          1          1
+48   1          1          1
+49   0.666667   0          1
+;
+
+ampl: 
