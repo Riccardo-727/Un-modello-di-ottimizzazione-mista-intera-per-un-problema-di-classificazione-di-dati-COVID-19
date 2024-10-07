@@ -1,0 +1,108 @@
+/*altezza massima dell'albero*/
+param D_max = 5;
+
+/*altezza dell'albero ad una determinata iterazione*/
+param D;
+
+/*numero minimo di punti all'interno di una folgia*/
+param N_min;
+
+/*rappresenta il numero max di split per una determinata iterazione, nel modello univariato e il numero max di variabili usate negli split per il modello multivariato */
+/*usato per tenere sotto controllo la complessita' dell' albero al posto di alpha che e' continuo*/
+param C;
+
+/*rappresenta in valore ottimo dell'obiettivo al variare dei parametri D e C*, lo inizializzo a un valore alto*/
+param obj_ottimo;
+
+/*rappresenta in valore ottimo di D*/
+param D_ottimo;
+
+/*rappresenta in valore ottimo di C*/
+param C_ottimo;
+
+/*rappresenta in valore ottimo di N_min*/
+param N_min_ottimo;
+
+/*contiene il valore dell' obiettivo di C e di D*/
+param sol {1..4, 1..1000};
+
+/*paramentro contatore numero iterazioni*/
+param count;
+
+
+
+#inizializzazione
+let D := 1;
+let N_min := 1;
+let C := 1;
+let obj_ottimo := 100;
+let count := 1;
+
+
+model optimalTree.mod;
+data data1.dat;
+option solver  gurobi;
+option gurobi_options "timelim=120";
+
+
+
+
+for {dd in 2..5} {
+	
+	for {cc in 1.. (dd^2 -1)*15} {
+	
+		for {n_min in 4..15} {
+		
+		printf('inizio iterazione');
+		
+		let D := dd;
+		let C := cc;
+		let N_min := n_min;
+
+			
+		solve;
+		
+		let sol[1, count] := obiettivo;
+		let sol[2, count] := D;
+		let sol[3, count] := C;
+		let sol[4, count] := N_min;
+		
+		let count := count + 1;
+		
+		if  obiettivo < obj_ottimo then {
+			let obj_ottimo := obiettivo;
+			let C_ottimo := C;
+			let D_ottimo := D;
+			let N_min_ottimo := N_min;
+			}
+		
+		display D;
+		display C;
+		display N_min;
+		
+		printf('fine iterazione');
+		
+		
+		reset data z;
+		reset data l;
+		reset data s;
+		reset data d;
+		reset data b;
+		reset data a;
+		reset data a_capp;
+		reset data N_kt;
+		reset data N_t;
+		reset data c_kt;
+		reset data L_t;
+		
+		
+	}
+}
+
+display obj_ottimo;
+display C_ottimo;
+display D_ottimo;
+display N_min_ottimo;
+
+
+

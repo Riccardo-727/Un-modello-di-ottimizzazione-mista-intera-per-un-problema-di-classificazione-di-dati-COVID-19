@@ -1,0 +1,74 @@
+let N := 75;
+let P := 15;
+let D := 3;
+let N_min := 5;
+let mu := 0.00005;
+let T := 2^(D+1) -1;
+
+
+let OSSERVAZIONI := 1 .. N;
+let FEATURES := 1 .. P;
+let BRANCH_NODES := 1..floor(T/2);    
+let LEAF_NODES := floor(T/2) +1 .. T;      
+let TOTAL_NODES := BRANCH_NODES union LEAF_NODES;
+let CLASSI := {0,1};
+
+
+
+#inizilizzazione degli ancestor
+for{t in TOTAL_NODES}{ 
+let A_L[t] := {} ;
+let A_R[t] := {} ;
+}
+ 
+
+#calcolo degli ancestor
+for{t in TOTAL_NODES diff {1} }{ 
+let temp := t;
+	repeat { 
+		if temp mod 2 == 0 then 
+			let A_L[t] := A_L[t] union {temp/2};
+			else
+			let A_R[t] := A_R[t] union {floor(temp/2)};
+		let temp := floor(temp/2);	
+		}  while temp/2 >=1 ;
+}	 
+
+
+
+#leggo i dati delle features e delle classi dell'allenamento
+read {i in OSSERVAZIONI, j in FEATURES} x[i,j] < x1.txt;
+read {i in OSSERVAZIONI} y[i] < y1.txt;
+
+#leggo i dati delle features e delle classi del test
+read {i in OSSERVAZIONI_TEST, j in FEATURES} x_tes[i,j] < x2.txt;
+read {i in OSSERVAZIONI_TEST} y_tes[i] < y2.txt;
+
+#definisco qui i valori x_max e x_min per non sporcare il modello
+#servono per normalizzare altrimenti intanto che eseguo il ciclo for 
+#della normalizzazione i valori cambiano
+param x_completo{1..150, FEATURES};
+read {i in 1..150, j in FEATURES} x_completo[i,j] < x.txt;
+param x_max {j in FEATURES} = max {m in OSSERVAZIONI} x_completo[m,j];
+param x_min {j in FEATURES} = min {m in OSSERVAZIONI} x_completo[m,j];
+
+
+
+#serve per normalizzare il vettore delle osservazioni, la normalizzazione è fatta rispetto al valroe massimo calcolato su tutte le osservazioni per ogni caratteristica
+for {i in OSSERVAZIONI, j in FEATURES}{
+ let x[i,j] := (x[i,j] - x_min[j]) / (x_max[j] - x_min[j] );
+}
+
+#serve per normalizzare il vettore delle osservazioni
+for {i in OSSERVAZIONI_TEST, j in FEATURES}{
+ let x_tes[i,j] := (x_tes[i,j] - x_min[j]) / (x_max[j] - x_min[j] );
+}
+
+#serve per assegnare il valore a L_tilda sulla base dei dati in ingresso
+if sum {i in OSSERVAZIONI : y[i] == 0} y[i] >= sum {i in OSSERVAZIONI : y[i] == 1} y[i] then
+	let L_tilda := sum {i in OSSERVAZIONI : y[i] == 0} y[i];
+	else
+	let L_tilda := sum {i in OSSERVAZIONI : y[i] == 1} y[i];
+
+
+

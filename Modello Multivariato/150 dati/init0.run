@@ -1,0 +1,137 @@
+
+reset;
+
+
+model optimalTree.mod;
+data data0.dat;
+option solver gurobi;
+option gurobi_options "timelim=1200 Integrality=1";
+
+solve;
+
+
+
+param temp_val;
+param t_val;
+param nodo_foglia_calcolato {OSSERVAZIONI};
+param classe_calcolata {OSSERVAZIONI};
+param veri_positivi;
+param veri_negativi;
+param falsi_positivi;
+param falsi_negativi;
+param accuratezza;
+param accuratezza_media;
+param richiamo;
+param precisione;
+
+
+
+	for{i in OSSERVAZIONI}{
+		let nodo_foglia_calcolato[i] := 0;
+		let classe_calcolata[i] := 0;
+	}
+	
+	
+	for {p in FEATURES, t in BRANCH_NODES}{
+		if d[t] = 0 then {
+			let a[p,t] := 0;
+			let b[t] := 0;
+		}
+	}
+	
+	
+	#questo for serve per calcolare la foglia in cui cade un'osservazione x(i)
+	for{i in OSSERVAZIONI}{
+	
+		let t_val := 1;
+		
+		repeat { 
+		
+				 let temp_val :=0.0;
+				 
+				 for{p in FEATURES}{
+				 	let temp_val := temp_val + a[p, t_val] * x[i,p];
+				 }
+				 
+				 if temp_val  < b[t_val] then{
+				 	let nodo_foglia_calcolato[i] := t_val*2;
+				 	let t_val := t_val*2;
+				 }else{
+				 	let nodo_foglia_calcolato[i] := t_val*2 + 1;
+				 	let t_val := t_val*2 + 1; 
+				 }
+	
+		    }while t_val <= floor(T/2) ;
+	}
+	
+	
+	#questo for serve per calcolare la classe di un'osservazione x(i)
+	for{i in OSSERVAZIONI}{
+	
+		for{l_val in LEAF_NODES}{
+	
+			if c_kt[0, l_val] == 1 then{
+				
+				if  nodo_foglia_calcolato[i] == l_val then
+					
+					let classe_calcolata[i] := 0;
+			}
+			
+			if c_kt[1, l_val] == 1 then{
+				
+				if  nodo_foglia_calcolato[i] == l_val then
+					
+					let classe_calcolata[i] := 1;
+			}
+		}
+	}
+	
+	
+	let veri_positivi := 0;
+	let veri_negativi := 0;
+	let falsi_positivi := 0;
+	let falsi_negativi := 0;
+	let accuratezza := 0;
+	let richiamo := 0;
+	let precisione := 0;
+	
+	
+	#calcola gli indicatori
+	for{i in OSSERVAZIONI}{
+	
+		if classe_calcolata[i] == 0 and y[i] == 0 then
+			let veri_negativi := veri_negativi + 1;
+		
+		if classe_calcolata[i] == 1 and y[i] == 1 then
+			let veri_positivi := veri_positivi + 1;
+			
+		if classe_calcolata[i] == 0 and y[i] == 1 then
+			let falsi_negativi := falsi_negativi + 1;
+			
+		if classe_calcolata[i] == 1 and y[i] == 0 then
+			let falsi_positivi := falsi_positivi + 1;
+			
+	}
+	
+	if (veri_positivi + veri_negativi + falsi_positivi + falsi_negativi) != 0 then
+		let accuratezza := (veri_positivi +veri_negativi)/(veri_positivi + veri_negativi + falsi_positivi + falsi_negativi);
+	if (veri_positivi + falsi_negativi) != 0 then
+		let richiamo := veri_positivi / (veri_positivi + falsi_negativi);
+	if (veri_positivi + falsi_positivi) != 0 then
+		let precisione :=  veri_positivi / (veri_positivi + falsi_positivi);
+	
+	
+	#calcolo accuratezza in sample
+	display accuratezza;
+	display a;
+	display a_capp;
+	display b;
+	display d;
+	display s;
+	display c_kt;
+	display L_t;
+	#display z;
+	
+	
+
+

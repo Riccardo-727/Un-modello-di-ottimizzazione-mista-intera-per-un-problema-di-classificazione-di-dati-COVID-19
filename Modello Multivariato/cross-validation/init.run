@@ -1,0 +1,349 @@
+
+#dati usati per l'allenamento (147 osservazioni)
+param x {1..147, 1..15};
+param y {1..147} binary;
+param L_tilda;
+#contiene tutte le 150 osservazioni, uso questi valori per normalizzare i dati, altrimenti la normalizzazione dipende dal k-dataset 
+param x_completo {1..150, 1..15};
+#leggo i dati completi delle 150 osservazioni
+read {i in 1..150, j in 1..15} x_completo[i,j] < x.txt;
+#definisco qui i valori x_max e x_min per non sporcare il modello
+#servono per normalizzare altrimenti intanto che eseguo il ciclo for 
+#della normalizzazione i valori cambiano
+param x_max {j in 1..15} = max {m in 1..150} x_completo[m,j];
+param x_min {j in 1..15} = min {m in 1..150} x_completo[m,j];
+
+
+
+
+model optimalTree.mod;
+data data.dat;
+option solver  gurobi;
+option gurobi_options "timelim=800 ";
+
+
+
+#insiemi e variabili per la fase di validazione (3 osservazioni)
+set OSSERVAZIONI_VAL := 1 .. 3;
+set OSSERVAZIONI_COMPLETO := 1 .. 150;
+
+param T_VAL := 2^(D+1) -1;
+param temp_val;
+param t_val;
+param x_val {OSSERVAZIONI_VAL, FEATURES};
+param y_val {OSSERVAZIONI_VAL} binary;
+param nodo_foglia_calcolato {OSSERVAZIONI_VAL};
+param classe_calcolata {OSSERVAZIONI_VAL};
+param nodo_foglia_calcolato_in_sample {OSSERVAZIONI};
+param classe_calcolata_in_sample {OSSERVAZIONI};
+param veri_positivi;
+param veri_negativi;
+param falsi_positivi;
+param falsi_negativi;
+param accuratezza;
+param accuratezza_media;
+param accuratezza_media_in_sample;
+param richiamo;
+param precisione;
+param sol {1..3, 0..49};
+param solInSample {1..3,0..49};
+
+
+for {k in 0..3}{
+
+	print "inizio iterazione" & k;
+
+	
+	#leggo i dati delle features e delle classi dell'allenamento
+	read {i in OSSERVAZIONI, j in FEATURES} x[i,j] < ('dati_allenamento\osservazioni\x' & k & '.txt');
+	read {i in OSSERVAZIONI} y[i] < ('dati_allenamento\classi\y' & k & '.txt');
+	
+	
+	#serve per normalizzare il vettore delle osservazioni
+	for {i in OSSERVAZIONI, j in FEATURES}{
+		if(x_max[j] - x_min[j] != 0 ) then
+	 		let x[i,j] := (x[i,j] - x_min[j]) / (x_max[j] - x_min[j] );
+	
+	}
+	
+	
+	#leggo i dati delle features e delle classi della validazione
+	read {i in OSSERVAZIONI_VAL, j in FEATURES} x_val[i,j] < ('dati_validazione\osservazioni\x' & k & '.txt');
+	read {i in OSSERVAZIONI_VAL} y_val[i] < ('dati_validazione\classi\y' & k & '.txt');
+	
+	
+	#normalizzo i dati della validazione
+	for {i in OSSERVAZIONI_VAL, j in FEATURES}{
+		if (x_max[j] - x_min[j]) != 0 then
+	 		let x_val[i,j] := (x_val[i,j] - x_min[j]) / (x_max[j] - x_min[j] );
+	 	
+	}
+	
+	
+	#calcolo L_tilda
+	if sum {i in OSSERVAZIONI : y[i] == 0} y[i] >= sum {i in OSSERVAZIONI : y[i] == 1} y[i] then
+		let L_tilda := sum {i in OSSERVAZIONI : y[i] == 0} y[i];
+	else
+		let L_tilda := sum {i in OSSERVAZIONI : y[i] == 1} y[i];
+	
+	
+	
+	
+	
+		solve;
+	
+	
+	
+	
+	#serve per assegnare un valore pari a zero alle variabili a e b quando sono diverse da zero ma la variabile d[t]=0 per lo stesso nodo t
+	for {p in FEATURES, t in BRANCH_NODES}{
+		if d[t] == 0 then {
+			let a[p,t] := 0;
+			let a_capp[p,t] :=0;
+			let b[t] := 0;
+		}
+	}
+	
+	
+	for{i in OSSERVAZIONI_VAL}{
+		let nodo_foglia_calcolato[i] := 0;
+		let classe_calcolata[i] := 0;
+	}
+	
+	#questo for serve per calcolare la foglia in cui cade un'osservazione x(i)
+	for{i in OSSERVAZIONI_VAL}{
+	
+		let t_val := 1;
+		repeat { 
+		
+				 let temp_val := 0.0;			 
+				 for{p in FEATURES}{
+				 	let temp_val := temp_val + a[p, t_val] * x_val[i,p];
+				 }
+				 
+				 if temp_val < b[t_val] then{
+				 	let nodo_foglia_calcolato[i] := t_val*2;
+				 	let t_val := t_val*2;
+				 }else{
+				 	let nodo_foglia_calcolato[i] := t_val*2 + 1;
+				 	let t_val := t_val*2 + 1; 
+				 }
+	
+		    }while t_val <= floor(T/2) ;
+	}
+	
+	
+	#questo for serve per calcolare la classe di un'osservazione x(i)
+	for{i in OSSERVAZIONI_VAL}{
+	
+		for{l_val in LEAF_NODES}{
+	
+	
+			if c_kt[0, l_val] == 1 then{
+				
+				if  nodo_foglia_calcolato[i] == l_val then
+					
+					let classe_calcolata[i] := 0;
+			}
+			
+			if c_kt[1, l_val] == 1 then{
+				
+				if  nodo_foglia_calcolato[i] == l_val then
+					
+					let classe_calcolata[i] := 1;
+			}
+		}
+	}
+	
+	
+	let veri_positivi := 0;
+	let veri_negativi := 0;
+	let falsi_positivi := 0;
+	let falsi_negativi := 0;
+	let accuratezza := 0;
+	#li ho inizializzati a 1 per il seguente motivo: se nelle 3 osservazioni non c'è nessun vero_positivo
+	#inizializzandolia zero gli darei un contributo basso dovuto all'AASENZA DI DATI piuttosto che ad un errore dell'algoritmo
+	let richiamo := 1;
+	let precisione := 1;
+	
+	
+	#calcola gli indicatori
+	for{i in OSSERVAZIONI_VAL}{
+	
+		if classe_calcolata[i] == 0 and y_val[i] == 0 then
+			let veri_negativi := veri_negativi + 1;
+		
+		if classe_calcolata[i] == 1 and y_val[i] == 1 then
+			let veri_positivi := veri_positivi + 1;
+			
+		if classe_calcolata[i] == 0 and y_val[i] == 1 then
+			let falsi_negativi := falsi_negativi + 1;
+			
+		if classe_calcolata[i] == 1 and y_val[i] == 0 then
+			let falsi_positivi := falsi_positivi + 1;
+			
+	}
+	
+	if (veri_positivi + veri_negativi + falsi_positivi + falsi_negativi) != 0 then
+		let accuratezza := (veri_positivi +veri_negativi)/(veri_positivi + veri_negativi + falsi_positivi + falsi_negativi);
+	if (veri_positivi + falsi_negativi) != 0 then
+		let richiamo := veri_positivi / (veri_positivi + falsi_negativi);
+	if (veri_positivi + falsi_positivi) != 0 then
+		let precisione :=  veri_positivi / (veri_positivi + falsi_positivi);
+	
+	let sol[1,k] := accuratezza;
+	let sol[2,k] := richiamo;
+	let sol[3,k] := precisione;
+	
+	
+	
+	print 'accuratezza out sample';
+	display accuratezza;
+	
+	
+	
+	
+	for{i in OSSERVAZIONI}{
+		let nodo_foglia_calcolato_in_sample[i] := 0;
+		let classe_calcolata_in_sample[i] := 0;
+	}
+	
+	#questo for serve per calcolare la foglia in cui cade un'osservazione x(i)
+	for{i in OSSERVAZIONI}{
+	
+		let t_val := 1;
+		repeat { 
+		
+				 let temp_val := 0.0;			 
+				 for{p in FEATURES}{
+				 	let temp_val := temp_val + a[p, t_val] * x[i,p];
+				 }
+				 
+				 if temp_val  < b[t_val] then{
+				 	let nodo_foglia_calcolato_in_sample[i] := t_val*2;
+				 	let t_val := t_val*2;
+				 }else{
+				 	let nodo_foglia_calcolato_in_sample[i] := t_val*2 + 1;
+				 	let t_val := t_val*2 + 1; 
+				 }
+	
+		    }while t_val <= floor(T/2) ;
+	}
+	
+	
+	#questo for serve per calcolare la classe di un'osservazione x(i)
+	for{i in OSSERVAZIONI}{
+	
+		for{l_val in LEAF_NODES}{
+	
+	
+			if c_kt[0, l_val] == 1 then{
+				
+				if  nodo_foglia_calcolato_in_sample[i] == l_val then
+					
+					let classe_calcolata_in_sample[i] := 0;
+			}
+			
+			if c_kt[1, l_val] == 1 then{
+				
+				if  nodo_foglia_calcolato_in_sample[i] == l_val then
+					
+					let classe_calcolata_in_sample[i] := 1;
+			}
+		}
+	}
+	
+	
+	let veri_positivi := 0;
+	let veri_negativi := 0;
+	let falsi_positivi := 0;
+	let falsi_negativi := 0;
+	let accuratezza := 0;
+	let richiamo := 1;
+	let precisione := 1;
+	
+	
+	#calcola gli indicatori
+	for{i in OSSERVAZIONI}{
+	
+		if classe_calcolata_in_sample[i] == 0 and y[i] == 0 then
+			let veri_negativi := veri_negativi + 1;
+		
+		if classe_calcolata_in_sample[i] == 1 and y[i] == 1 then
+			let veri_positivi := veri_positivi + 1;
+			
+		if classe_calcolata_in_sample[i] == 0 and y[i] == 1 then
+			let falsi_negativi := falsi_negativi + 1;
+			
+		if classe_calcolata_in_sample[i] == 1 and y[i] == 0 then
+			let falsi_positivi := falsi_positivi + 1;
+			
+	}
+	
+	if (veri_positivi + veri_negativi + falsi_positivi + falsi_negativi) != 0 then
+		let accuratezza := (veri_positivi +veri_negativi)/(veri_positivi + veri_negativi + falsi_positivi + falsi_negativi);
+	if (veri_positivi + falsi_negativi) != 0 then
+		let richiamo := veri_positivi / (veri_positivi + falsi_negativi);
+	if (veri_positivi + falsi_positivi) != 0 then
+		let precisione :=  veri_positivi / (veri_positivi + falsi_positivi);
+	
+	
+	let solInSample[1,k] := accuratezza;
+	let solInSample[2,k] := richiamo;
+	let solInSample[3,k] := precisione;
+	
+	
+	
+	
+	print 'accuratezza_in sample';
+	display accuratezza;
+	
+	
+	print 'altre variabili';
+	display s;
+	display a;
+	display a_capp;
+	display b;
+	display d;
+	display l;
+	display c_kt;
+	display L_t;
+	#display z;
+	display nodo_foglia_calcolato;
+	display classe_calcolata;
+	
+	
+	print "fine iterazione" & k;
+	
+	
+	reset data z;
+	reset data l;
+	reset data s;
+	reset data d;
+	reset data b;
+	reset data a;
+	reset data a_capp;
+	reset data N_kt;
+	reset data N_t;
+	reset data c_kt;
+	reset data L_t;
+	reset data x;
+	reset data y;
+	reset data x_val;
+	reset data y_val;
+	
+	
+}
+
+let accuratezza_media := 0;
+for{j in 0..49}{
+	let accuratezza_media := accuratezza_media + sol[1,j];
+}
+let accuratezza_media := accuratezza_media / 50;
+
+
+let accuratezza_media_in_sample := 0;
+for{j in 0..49}{
+	let accuratezza_media_in_sample := accuratezza_media_in_sample + solInSample[1,j];
+}
+let accuratezza_media_in_sample := accuratezza_media_in_sample / 50;
